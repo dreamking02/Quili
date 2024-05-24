@@ -137,7 +137,7 @@ gvm use go1.20.2
 git clone https://github.com/quilibriumnetwork/ceremonyclient
 
 # 进入ceremonyclient/node目录
-cd ceremonyclient/node 
+cd /root/ceremonyclient/node
 
 # 构建服务
 GOEXPERIMENT=arenas go install ./...
