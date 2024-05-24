@@ -65,10 +65,10 @@ bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/bins
 source /root/.gvm/scripts/gvm
 
 
-gvm install go1.17.13
+gvm install go1.17.13 -B
 gvm use go1.17.13
 export GOROOT_BOOTSTRAP=$GOROOT
-gvm install go1.20.2
+gvm install go1.20.2 -B
 gvm use go1.20.2
 
 # 克隆仓库
@@ -208,9 +208,8 @@ screen -dmS Quili bash -c 'source /root/.gvm/scripts/gvm && gvm use go1.20.2 && 
 # 主菜单
 function main_menu() {
     clear
-    echo "Dream   -ARM专属"
+    echo "Dream    -ARM"
     echo "================================================================"
-
     echo "请选择要执行的操作:"
     echo "1. 安装常规节点"
     echo "2. 查看常规版本节点日志"
