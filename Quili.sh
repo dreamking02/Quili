@@ -75,7 +75,7 @@ gvm use go1.20.2
 git clone https://github.com/quilibriumnetwork/ceremonyclient
 
 # 进入ceremonyclient/node目录
-cd ceremonyclient/node 
+cd /root/ceremonyclient/node
 
 # 赋予执行权限
 chmod +x poor_mans_cd.sh
