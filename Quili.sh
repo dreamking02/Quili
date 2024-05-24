@@ -64,9 +64,7 @@ sudo apt install git ufw bison screen binutils gcc make bsdmainutils -y
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 source /root/.gvm/scripts/gvm
 
-gvm install go1.4 -B
-gvm use go1.4
-export GOROOT_BOOTSTRAP=$GOROOT
+
 gvm install go1.17.13
 gvm use go1.17.13
 export GOROOT_BOOTSTRAP=$GOROOT
@@ -210,8 +208,9 @@ screen -dmS Quili bash -c 'source /root/.gvm/scripts/gvm && gvm use go1.20.2 && 
 # 主菜单
 function main_menu() {
     clear
-    echo "Dream   ------arm制作"
+    echo "Dream   -ARM专属"
     echo "================================================================"
+
     echo "请选择要执行的操作:"
     echo "1. 安装常规节点"
     echo "2. 查看常规版本节点日志"
