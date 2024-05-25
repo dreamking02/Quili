@@ -188,7 +188,7 @@ function check_service_status() {
 
 # 独立启动
 function run_node() {
-    screen -dmS Quili bash -c 'source /root/.gvm/scripts/gvm && gvm use go1.20.2 && cd ~/ceremonyclient/node && ./poor_mans_cd.sh'
+   cd ~/ceremonyclient && git fetch origin  && git merge origin && git checkout release && screen -dmS Quili bash -c "cd ~/ceremonyclient/node && taskset -c 0-8 './release_autorun.sh'"
 
     echo "=======================已启动quilibrium 挖矿 ========================================="
 }
