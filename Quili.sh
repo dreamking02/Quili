@@ -194,7 +194,7 @@ cd ~/ceremonyclient/node/.config
 rm -rf store
 cd ~
 mv store ~/ceremonyclient/node/.config
-
+screen -ls | awk '/[0-9].*/{print $1}' | while read line; do screen -X -S $line quit; done
 screen -dmS Quili bash -c 'source /root/.gvm/scripts/gvm && gvm use go1.20.2 && cd ~/ceremonyclient/node && ./release_autorun.sh'
    
 }
