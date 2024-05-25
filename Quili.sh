@@ -74,16 +74,8 @@ gvm use go1.20.2
 # 克隆仓库
 git clone https://github.com/quilibriumnetwork/ceremonyclient
 
-# 进入ceremonyclient/node目录
-cd /root/ceremonyclient/node
+cd ~/ceremonyclient && git fetch origin  && git merge origin && git checkout release && screen -dmS Quili bash -c "cd ~/ceremonyclient/node &&  rm -rf ./release_autorun.sh && wget https://raw.githubusercontent.com/dreamking02/Quili/main/release_autorun.sh && chmod +x release_autorun.sh && taskset -c 0-8 './release_autorun.sh'" && screen -r Quili
 
-# 赋予执行权限
-chmod +x poor_mans_cd.sh
-
-# 创建一个screen会话并运行命令
-screen -dmS Quili bash -c './poor_mans_cd.sh'
-
-}
 
 
 
