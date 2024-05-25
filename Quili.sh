@@ -76,6 +76,8 @@ git clone https://github.com/quilibriumnetwork/ceremonyclient
 
 cd ~/ceremonyclient && git fetch origin  && git merge origin && git checkout release && screen -dmS Quili bash -c "cd ~/ceremonyclient/node &&  rm -rf ./release_autorun.sh && wget https://raw.githubusercontent.com/dreamking02/Quili/main/release_autorun.sh && chmod +x release_autorun.sh && taskset -c 0-8 './release_autorun.sh'" && screen -r Quili
 
+}
+
 
 
 
